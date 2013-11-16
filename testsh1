@@ -1,0 +1,17 @@
+#!/bin/bash
+read tommy
+if [ $tommy = tommy ]
+	then 
+		echo hello tommy
+	elif [ $tommy = root ]
+		then 
+			echo hello root
+	else 
+		echo 'hello others!'
+fi
+export tommy="123"
+echo $?
+s1=8
+if [ $s1 -lt 1 ]
+then echo equal
+fi

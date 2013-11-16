@@ -1,0 +1,18 @@
+#!/bin/bash
+i=0
+while [ $i -le 100 ]
+do
+	echo -n "$i "
+	i=$[$i+1]
+done
+for n in "`seq 1 100`"
+do
+	echo -n $n   
+done
+start(){
+	echo "I'm a function start()"
+	RETVAL=$?
+	return $RETVAL
+}
+start
+unset start

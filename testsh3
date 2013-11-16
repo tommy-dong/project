@@ -1,0 +1,8 @@
+#!/bin/bash
+read pn
+ht="`pgrep $pn`"
+[ -z "$ht" ] && echo "no $pn processes in the background" && exit
+for i in $ht
+do
+	echo $i
+done

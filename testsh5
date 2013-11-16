@@ -1,0 +1,11 @@
+#!/bin/bash
+se()
+{
+	ii=$[$1*$1]
+	return $ii
+}
+se $1
+ret=$?
+echo $ret
+unset ii
+exit

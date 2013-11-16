@@ -1,0 +1,3 @@
+BEGIN{iii=0}
+{if($7=="/bin/bash") print $1}
+END{}

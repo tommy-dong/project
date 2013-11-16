@@ -1,0 +1,11 @@
+#!/bin/bash
+echo ${1} '$1'
+echo $2 \$\2
+echo $3 \$\3
+echo $# \$\# 'number of parameter'
+echo $? \$\?
+echo $$ \$\$
+read -p "pls input your parameter" AAA
+printf "parameter is $AAA\n"
+export BBB="tommy"
+echo $?
