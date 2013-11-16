@@ -6,6 +6,7 @@ int  main(int argc, char * argv[])
   char c = -128;
   c += -1;
   printf("Hello C %d\r\n",c);
+  printf("Parameter 1 is %s",argv[0]);
   #endif
   return 0; 
 }
