@@ -6,6 +6,6 @@ int  main(int argc, char * argv[])
   char c = -128;
   c += -1;
   printf("Hello C %d\r\n",c);
-#endif
- return 0; 
+  #endif
+  return 0; 
 }
