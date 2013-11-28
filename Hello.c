@@ -1,5 +1,17 @@
 #include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<iostream>
+using namespace std;
 #define TOMMY
+char * tstrcpy(char * des, const char * src)
+{
+	char * tmp = des;
+	if(des==NULL||src ==NULL)
+		throw "NULL POINTER ERROR";
+	while(*(des++)=*(src++)!='\0');
+	return tmp;
+}
 int  main(int argc, char * argv[])
 {
   #ifdef TOMMY
@@ -9,8 +21,9 @@ int  main(int argc, char * argv[])
   printf("Parameter 1 is %s\r\n2 is %s\r\n",argv[0],argv[1]);
   #endif
   //__int64 o = 10;
-  float f = 1.0;
-  float ff = 1.1;
+  float f = 1.23;
+  float ff = 1.23;
+  printf("ff is %f\r\n",ff);
   if(f==ff)
   {
 	  printf("equal\n");
@@ -35,5 +48,20 @@ int  main(int argc, char * argv[])
 
   printf("cc  new address is %p, cc = %d\n",cc,*cc);
   printf("m address is %p, m = %d\n",&m,m);
+  const char * tc = "tommy";
+  char tca[]="haha";
+  printf("strlen %ld\r\n",strlen(tc));
+ // char * des = (char *)malloc(strlen(tc));//new char[strlen(tc)];
+  char * des = new char[strlen(tc)];
+  //strcpy(des,tc);
+  tstrcpy(des,tc);
+  const char * mm = tc;
+  printf("mm address is %p, m = %s\n",mm,mm);
+  mm =tca;
+  printf("mm address is %p, m = %s\n",mm,mm);
+  char * const mmm = des;
+  *mmm='h';
+
+  printf("mmm address is %p, m = %s\n",mmm,mmm);
   return 0; 
 }
